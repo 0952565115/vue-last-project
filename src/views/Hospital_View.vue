@@ -6,7 +6,7 @@
 
 <script setup>
 
-import Hospital_Tap from '../components/Hospital_Tap.vue';
+import Hospital_Tap from '../components/Hospital/Hospital_Tap.vue';
 
 </script>
 

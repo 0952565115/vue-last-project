@@ -14,74 +14,50 @@
           <div class="card-body">
 
             <p class="card-text">{{ product.description }}</p>
-            <p class="card-text">{{ product.description_1 }}</p>
-            <p class="card-text">{{ product.description_2 }}</p>
-            <p class="card-text">{{ product.description_3 }}</p>
-            <p class="card-text">{{ product.description_4 }}</p>
-            <p class="card-text">{{ product.description_5 }}</p>
-            <p class="card-text">{{ product.description_6 }}</p>
+            <p class="card-text">{{ product.description_s }}</p>
+
+            <h2 class="card-text">{{ product.implication_title }}</h2>
+            <p class="card-text">{{ product.implication }}</p>
+            <p class="card-text">{{ product.implication_s }}</p>
+
+            <h2 class="card-text">{{ product.treatment_rights_title }}</h2>
+            <p class="card-text">{{ product.treatment_rights }}</p>
+
+            <h2 class="card-text">{{ product.collateral_rights_title }}</h2>
+            <p class="card-text">{{ product.collateral_rights }}</p>
+
+            <h2 class="card-text">{{ product.collateral_rights_s_title }}</h2>
+            <p class="card-text">{{ product.collateral_s_rights }}</p>
+            
+            <h2 class="card-text">{{ product.civil_servant_rights_title }}</h2>
+            <p class="card-text">{{ product.civil_servant_rights }}</p>
+
+            <h2 class="card-text">{{ product.health_check_title }}</h2>
 
             <div class="container-img">
-              <img :src="product.imge_Dengue_hemorrhagic_fever_1" alt="" style="width: 40%; padding: 20px;">
+              <img :src="product.img_hospital" alt="" style="width: 50%; padding: 20px;">
             </div>
 
-            <h2 class="card-text">{{ product.symptom_title }}</h2>
-            <p class="card-text">{{ product.symptom }}</p>
-            <p class="card-text">{{ product.symptom_1 }}</p>
-            <p class="card-text">{{ product.symptom_2 }}</p>
-            <p class="card-text">{{ product.symptom_3 }}</p>
-            <p class="card-text">{{ product.symptom_4 }}</p>
-            <p class="card-text">{{ product.symptom_5 }}</p>
-            <p class="card-text">{{ product.symptom_6 }}</p>
-            <p class="card-text">{{ product.symptom_7 }}</p>
-            <p class="card-text">{{ product.symptom_8 }}</p>
-            <p class="card-text">{{ product.symptom_9 }}</p>
+            <h2 class="card-text">{{ product.aim_title }}</h2>
+            <p class="card-text">{{ product.aim }}</p>
+            <p class="card-text">{{ product.aim_1 }}</p>
+            <p class="card-text">{{ product.aim_2 }}</p>
+            <p class="card-text">{{ product.aim_3 }}</p>
+            <p class="card-text">{{ product.aim_4 }}</p>
 
-            <h2 class="card-text">{{ product.cause_title }}</h2>
-            <p class="card-text">{{ product.cause }}</p>
+            <h2 class="card-text">{{ product.health_check_ought_title }}</h2>
+            <p class="card-text">{{ product.health_check_ought }}</p>
 
-            <h2 class="card-text">{{ product.diagnose_title }}</h2>
-            <p class="card-text">{{ product.diagnose }}</p>
-            <p class="card-text">{{ product.diagnose_1 }}</p>
-            <p class="card-text">{{ product.diagnose_2 }}</p>
-            <p class="card-text">{{ product.diagnose_3 }}</p>
-            <p class="card-text">{{ product.diagnose_4 }}</p>
-
-            <h2 class="card-text">{{ product.treatment_title }}</h2>
-            <p class="card-text">{{ product.treatment }}</p>
-            <p class="card-text">{{ product.treatment_1 }}</p>
-            <p class="card-text">{{ product.treatment_2 }}</p>
-            <p class="card-text">{{ product.treatment_3 }}</p>
-            <p class="card-text">{{ product.treatment_4 }}</p>
-            <p class="card-text">{{ product.treatment_5 }}</p>
-
-            <h2 class="card-text">{{ product.prophylaxis_title }}</h2>
-            <p class="card-text">{{ product.prophylaxis }}</p>
-            <p class="card-text">{{ product.prophylaxis_1 }}</p>
-            <p class="card-text">{{ product.prophylaxis_2 }}</p>
-            <p class="card-text">{{ product.prophylaxis_3 }}</p>
-            <p class="card-text">{{ product.prophylaxis_4 }}</p>
-            <p class="card-text">{{ product.prophylaxis_5 }}</p>
-
-            <div class="container-img">
-              <img :src="product.imge_Dengue_hemorrhagic_fever_2" alt="" style="width: 40%; padding: 20px;">
-            </div>
-
-            <h2 class="card-text">{{ product.symptom_d_title }}</h2>
-            <p class="card-text">{{ product.symptom_d }}</p>
-            <p class="card-text">{{ product.symptom_d_1 }}</p>
-            <p class="card-text">{{ product.symptom_d_2 }}</p>
-            <p class="card-text">{{ product.symptom_d_3 }}</p>
-            <p class="card-text">{{ product.symptom_d_4 }}</p>
-            <p class="card-text">{{ product.symptom_d_5 }}</p>
-            <p class="card-text">{{ product.symptom_d_6 }}</p>
-            <p class="card-text">{{ product.symptom_d_7 }}</p>
+            <h2 class="card-text">{{ product.compensate_title }}</h2>
+            <p class="card-text">{{ product.compensate }}</p>
 
             <p class="card-text">{{ product.last_description }}</p>
 
             <div class="container-img">
-              <img :src="product.imge_health" alt="" style="width: 40%; padding: 20px;">
+              <img :src="product.img_aim" alt="" style="width: 40%; padding: 20px;">
             </div>
+
+            <br>
 
           </div>
         </div>
@@ -97,10 +73,10 @@
 import { useRoute } from 'vue-router'
 import { ref,computed } from 'vue';
   
-import { useHealthDetails_2_list } from '@/stores/counter.js';
+import { useHospital_list } from '@/stores/counter.js';
   
-const healthdetails_2_all = useHealthDetails_2_list();
-const list = ref(healthdetails_2_all.HealthDetails_2_list);
+const hospital_all = useHospital_list();
+const list = ref(hospital_all.Hospital_list);
   
 const route = useRoute()
   

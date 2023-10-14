@@ -20,7 +20,11 @@ import HealthTipsList from '../components/HealthTips/HealthTipsList/HealthTipsLi
 import HealtyFoodView from '../views/HealtyFood_View.vue'
 import HealtyFoodList from '../components/HealtyFood/HealtyFoodList/HealtyFoodList.vue'
 
+// โรงพยาบาล
 import HospitalView from '../views/Hospital_View.vue'
+import HospitalList from '../components/Hospital/HospitalList/HospitalList.vue'
+
+// ข่าวสุขภาพ
 import NewsDetails_View from '../components/HealthNewsDetails_Tap.vue'
 
 
@@ -92,12 +96,19 @@ const router = createRouter({
       component: HealtyFoodList
     },
 
-
+    // โรงพยาบาล
     {
       path: '/hospital',
       name: 'hospital',
       component: HospitalView
     },
+    {
+      path: '/hospital/hospitallist/:id',
+      name: 'hospitallist',
+      component: HospitalList
+    },
+
+    // ข่าวสุขภาพ
     {
       path: '/newsdetails/:id',
       name: 'newsdetails',
